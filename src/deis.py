@@ -1,8 +1,9 @@
 import requests
 import json
 import thread
+import os
 
-deis_controller = "http://deis.23.251.142.211.xip.io"
+deis_controller = os.environ['DEIS_URL']
 
 def deis_login(username, password):
     url = deis_controller + "/v1/auth/login/"
